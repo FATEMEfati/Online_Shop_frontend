@@ -1,0 +1,10 @@
+version: '3.8'  # Specify the version of Docker Compose
+
+services:
+  web:
+    build: .
+    container_name: django
+    ports:
+      - '8001:8001'
+    volumes:
+      - .:/app
