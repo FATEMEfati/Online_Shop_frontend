@@ -88,10 +88,27 @@ async function isLoggedIn() {
     console.log(data.expiration);
     // Assuming the API response contains a field 'isValid' and 'isExpired'
     if (data.expiration) {
+      const user_name_response = await fetch(
+        "http://194.5.193.46:8000/api-v1/token_info/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ token: token }),
+        }
+      );
+  
+      if (user_name_response.ok) {
+        const user_data = await user_name_response.json();
+        const user_login = user_data.username;
+        document.getElementById("userLogin").textContent = user_login;
+      }
       return true;
     } else {
       return false; // Token is either invalid or expired
     }
+
   } catch (error) {
     console.error("Error validating token:", error);
     return false; // Return false if there is an error with the API call
