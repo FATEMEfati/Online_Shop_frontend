@@ -67,14 +67,6 @@ If you prefer to run the project using Docker, you can do so by following these 
 3. **Run the Docker containers:**
    ```bash
    docker-compose up
-4. **Set up the database: In a new terminal, run:**
-    ```bash
-    docker-compose exec web python manage.py migrate
-    
-5. **Create a superuser (optional): You can also create a superuser by running:**
-    ```bash
-    docker-compose exec web python manage.py createsuperuser
-
 ## Usage
    After cloning the project, all IPs used in index.html, base.html, user.js, custom.js and views.py files must be changed.
    Navigate through the homepage to view available products.
