@@ -15,6 +15,7 @@
 - Product detail pages
 - Shopping cart functionality 
 - Responsive design for mobile and desktop views
+- Dockerized for easy deployment
 
 ## Technologies Used
 
@@ -33,19 +34,20 @@ To run this project locally, follow these steps:
    git clone https://github.com/yourusername/online_store_frontend.git
 
 2. Navigate to the project directory:
+   After cloning the project, all IPs used in index.html, base.html, user.js, custom.js and views.py files must be changed.
    ```bash
    cd online_store_frontend
 
-3. Create a virtual environment (optional but recommended):
+4. Create a virtual environment (optional but recommended):
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-4.  Install the required packages:
+5.  Install the required packages:
     ```bash
     requarments.txt
 
-5. Run the development server 8001:
+6. Run the development server 8001:
    ```bash
    python manage.py runserver
 After launching the online_shop_backend application Open your browser and go to http://127.0.0.1:8001/ to view the application.
